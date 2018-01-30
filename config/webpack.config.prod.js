@@ -1,16 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const pkg = require('./package.json');
-const _ = require('lodash');
+const pkg = require('../package.json');
+const { keys } = require('lodash');
 
 module.exports = {
     entry: {
         js: './src/index',
-        vendor: _.keys(pkg.dependencies)
+        vendor: keys(pkg.dependencies)
     },
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, '../dist'),
         filename: 'bundle.js'
     },
     plugins: [
@@ -49,7 +49,7 @@ module.exports = {
     },
     resolve: {
         modules: [
-            path.join(__dirname, 'src'),
+            path.join(__dirname, './src'),
             'node_modules'
         ],
         extensions: ['.js', '.jsx']

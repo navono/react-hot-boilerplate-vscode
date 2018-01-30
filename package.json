@@ -4,7 +4,7 @@
   "description": "A new Webpack boilerplate with hot reloading React components, error handling on module and component level and Visual Studio Code integration",
   "scripts": {
     "clean": "rimraf dist",
-    "build:webpack": "cross-env NODE_ENV=production webpack --colors --config webpack.config.prod.js",
+    "build:webpack": "cross-env NODE_ENV=production webpack --colors --config ./config/webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node devServer.js",
     "lint": "eslint src/**",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/skolmer/react-hot-boilerplate-vscode.git"
+    "url": "https://github.com/navono/react-hot-boilerplate-vscode.git"
   },
   "keywords": [
     "react",
@@ -26,12 +26,12 @@
     "webpack",
     "babel"
   ],
-  "author": "Steffen Kolmer <steffen@kolmer.net> (http://github.com/skolmer)",
+  "author": "Steffen Kolmer <steffen@kolmer.net> (http://github.com/navono)",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/skolmer/react-hot-boilerplate-vscode/issues"
+    "url": "https://github.com/navono/react-hot-boilerplate-vscode/issues"
   },
-  "homepage": "https://github.com/skolmer/react-hot-boilerplate-vscode",
+  "homepage": "https://github.com/navono/react-hot-boilerplate-vscode",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
