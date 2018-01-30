@@ -6,16 +6,11 @@
 // ${fileExtname}: the current opened file's extension
 // ${cwd}: the current working directory of the spawned process
 {
-	"version": "0.1.0",
-	"command": "npm",
-	"isShellCommand": true,
+	"version": "2.0.0",
 	"echoCommand": false,
-	"suppressTaskName": true,
-	"showOutput": "always",
 	"tasks": [
 		{
 			"args": [
-				"run",
 				"start",
 				"--silent",
 				"--react-hot-boilerplate-vscode:port=3000",
@@ -73,11 +68,13 @@
 				}
 			],
 			"isBackground": true,
-			"taskName": "development"
+			"label": "development",
+			"type": "shell",
+			"command": "yarn",
 		},
 		{
+			"command": "yarn",
 			"args": [
-				"run",
 				"build",
 				"--silent"
 			],
@@ -121,22 +118,15 @@
 					]
 				}
 			],
-			"taskName": "release",
-			"isBuildCommand": true
+			"label": "release",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
 		},
 		{
+			"command": "yarn",
 			"args": [
-				"install",
-				"--progress",
-				"false",
-				"--loglevel",
-				"http"
-			],
-			"taskName": "install"
-		},
-		{
-			"args": [
-				"run",
 				"lint",
 				"--loglevel",
 				"silent"
@@ -144,8 +134,11 @@
 			"problemMatcher": [
 				"$eslint-stylish"
 			],
-			"taskName": "lint",
-			"isTestCommand": true
+			"label": "lint",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
 		}
 	]
 }
