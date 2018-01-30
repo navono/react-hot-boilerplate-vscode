@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    context: path.resolve(__dirname, "../src"),
+    context: path.resolve(__dirname, '../src'),
 
     devtool: 'cheap-module-source-map',
     entry: [
@@ -24,7 +24,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new HtmlWebpackPlugin({
-            template: './index.html', // Load a custom template
+            template: '../index.html', // Load a custom template
             inject: 'body' // Inject all scripts into the body
         })
     ],

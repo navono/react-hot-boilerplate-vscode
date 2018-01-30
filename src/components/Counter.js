@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import add from 'lodash/add'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import add from 'lodash/add';
 
 class Counter extends Component {
     constructor(props) {

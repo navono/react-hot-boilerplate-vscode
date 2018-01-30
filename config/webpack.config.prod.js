@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pkg = require('../package.json');
-const { keys } = require('lodash');
+const keys = require('lodash/keys');
 
 module.exports = {
     entry: {
